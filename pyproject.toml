@@ -1,0 +1,13 @@
+[project]
+name = "mcp-server-satorbit"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "mcp[cli]>=1.11.0", 
+    "numpy>=1.21.0",
+    "matplotlib>=3.10.3",
+    "cartopy>=0.24.1",
+    "astropy>=7.1.0",
+]
