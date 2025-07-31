@@ -47,6 +47,7 @@
 3. 激活虚拟环境：
    ```bash
    # Windows PowerShell
+   Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
    .venv\Scripts\Activate.ps1
    
    # Windows Command Prompt

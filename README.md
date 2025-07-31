@@ -47,6 +47,7 @@ A Model Context Protocol (MCP) based satellite orbit calculation and visualizati
 3. Activate the virtual environment:
    ```bash
    # Windows PowerShell
+   Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
    .venv\Scripts\Activate.ps1
    
    # Windows Command Prompt
