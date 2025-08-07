@@ -142,7 +142,7 @@ def orbit_prediction_two_body(
         M - mean anomaly (degrees)
     step: Time step for prediction (minutes)
     duration: Total prediction time duration (minutes)
-    fnEph: Output ephemeris filename (default: "eph.txt")
+    fnEph: Output ephemeris filename (absolute path)
         Format: MJD_day, MJD_sec, x, y, z, vx, vy, vz
     
     Returns:
@@ -154,7 +154,7 @@ def orbit_prediction_two_body(
         [7000.0, 0.001, 45.0, 90.0, 0.0, 0.0],  # Initial orbital elements
         10.0,                       # 10-minute steps
         1440.0,                     # Predict for 1 day (1440 minutes)
-        "satellite_eph.txt"         # Output file
+        "c:/satellite_eph.txt"         # Output file
     )
     """
     from src.orbit_prediction_two_body import orbit_prediction_two_body
@@ -210,7 +210,7 @@ def orbit_prediction_numerical(
         Time step in seconds
     
     filename : str
-        Output ephemeris filename
+        Output ephemeris filename (absolute path)
     
     ephType : int, optional (default=2)
         Ephemeris type (1: Keplerian elements, 2: position/velocity)
@@ -736,7 +736,7 @@ def initial_orbit_determination(
         latitude (float): Station latitude in degrees (-90 to 90)
         altitude (float): Station altitude in meters
         obs_type (int): Observation type (1 for AH, 2 for AD, 3 for RRD)
-        data_file (str): Path to observation data file
+        data_file (str): Path to observation data file (absolute path)
     
     Returns:
         str: Program execution output

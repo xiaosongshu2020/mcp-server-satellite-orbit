@@ -47,7 +47,7 @@ def run_orbitPrediction_numerical(
         Time step in seconds
     
     filename : str
-        Output ephemeris filename
+        Output ephemeris filename(absolute path)
     
     ephType : int, optional (default=2)
         Ephemeris type (1: Keplerian elements, 2: position/velocity)
@@ -109,7 +109,7 @@ def run_orbitPrediction_numerical(
         kepler_elements=[7000, 0.01, 45, 30, 60, 90],
         end_time="2023 01 02 12 00 00.000",
         step=60,
-        filename="output.txt"
+        filename="d:/output.txt"
     )
     
     # Advanced usage with custom parameters
@@ -118,7 +118,7 @@ def run_orbitPrediction_numerical(
         kepler_elements="7000 0.01 45 30 60 90",
         end_time="2023 01 02 12 00 00.000",
         step=60,
-        filename="output.txt",
+        filename="d:/output.txt",
         ephType=1,
         Cd=2.3,
         F107=150.0,

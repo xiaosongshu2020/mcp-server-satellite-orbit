@@ -12,14 +12,14 @@ import math
 def orbit_prediction_two_body(t0, elements0, step, duration, fnEph="eph.txt"):
     """
     Predict satellite orbit using two-body problem dynamics
-    
+
     Parameters:
     t0: Initial time as [year, month, day, hour, minute, second]
     elements0: Initial Keplerian elements [a, e, i, Omega, omega, M]
     step: Time step for prediction (minutes)
     duration: Total prediction time duration (minutes)
-    fnEph: Output ephemeris filename
-    
+    fnEph: Output ephemeris filename (absolute path)
+
     Returns:
     Final Keplerian elements at time t0 + duration
     """
