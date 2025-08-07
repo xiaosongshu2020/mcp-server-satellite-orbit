@@ -25,8 +25,8 @@ def orbit_prediction_two_body(t0, elements0, step, duration, fnEph="eph.txt"):
     """
     
     # Import required functions
-    from dateMJD import date2mjd, mjd2date
-    from orbitTools import kpl2cts, cts2kpl
+    from src.dateMJD import date2mjd, mjd2date
+    from src.orbitTools import kpl2cts, cts2kpl
     
     # Convert initial time to MJD
     time_str = f"{int(t0[0]):04d}-{int(t0[1]):02d}-{int(t0[2]):02d} {int(t0[3]):02d}:{int(t0[4]):02d}:{int(t0[5]):02d}"

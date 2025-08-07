@@ -2,10 +2,10 @@ import numpy as np
 import datetime
 
 from Earth import Earth
-from Satellite import Satellite
-from Station import GroundStation
-from access import Access
-from colorEnumerator import colorEnumerator
+from src.Satellite import Satellite
+from src.Station import GroundStation
+from src.access import Access
+from src.colorEnumerator import colorEnumerator
 
 class SatelliteScenario:
     """

@@ -1,8 +1,8 @@
 import datetime
 import matplotlib.pyplot as plt
-from Satellite import Satellite
-from satelliteScenario import SatelliteScenario
-from visualize import visualize_orbits, visualize_ground_track
+from src.Satellite import Satellite
+from src.satelliteScenario import SatelliteScenario
+from src.visualize import visualize_orbits, visualize_ground_track
 
 def plot_satellite(ephemeris_file, start_time, end_time, sat_name='sat', sat_id='sat-001',
                   orbit_plot='data/orbit_plot.png', ground_track='data/ground_track.png',

@@ -1,6 +1,6 @@
 import os
 from access import Access
-from visualize import visualize_access
+from src.visualize import visualize_access
 
 def plot_access(access_file_path, station_name, satellite_name, obs_type, output_file=None):
     """

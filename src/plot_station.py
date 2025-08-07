@@ -1,7 +1,7 @@
 import os
 import matplotlib.pyplot as plt
-from Station import GroundStation
-from visualize import visualize_stations
+from src.Station import GroundStation
+from src.visualize import visualize_stations
 
 class SimpleScenario:
     """简单的场景类，仅包含地面站列表"""
