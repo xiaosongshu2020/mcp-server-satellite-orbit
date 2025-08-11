@@ -34,8 +34,8 @@ class Satellite:
             - cartesian: 位置速度数组，每个元素为[x,y,z,vx,vy,vz]
         eph_coord (str): 星历数据所处的坐标系，默认为"GCRS"
         """
-        import colorEnumerator
-        colorEnum = colorEnumerator.colorEnumerator()
+        from src.colorEnumerator import colorEnumerator
+        colorEnum = colorEnumerator()
 
         self.name = name
         self.satellite_id = satellite_id

@@ -1,7 +1,7 @@
 import numpy as np
 import datetime
 
-from Earth import Earth
+from src.Earth import Earth
 from src.Satellite import Satellite
 from src.Station import GroundStation
 from src.access import Access
