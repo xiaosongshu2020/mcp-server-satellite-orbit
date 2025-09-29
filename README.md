@@ -1,5 +1,7 @@
 # MCP Server for Satellite Orbit
 
+![BDS Orbit Plot](data/bds_orbit_plot.png)
+
 A Model Context Protocol (MCP) based satellite orbit calculation and visualization server. This server provides a suite of tools for satellite orbital dynamics calculations, orbit prediction, observation data processing, and visualization.
 
 ## Features
