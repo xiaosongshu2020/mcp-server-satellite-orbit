@@ -158,9 +158,15 @@ def orbit_prediction_two_body(
     )
     """
     from src.orbit_prediction_two_body import orbit_prediction_two_body
+    from src.reportFile import reportFile
+    
     elements1 = orbit_prediction_two_body(t0, elements0, step, duration, fnEph)
     result = f"orbit prediction successful, ephemeris saved to {fnEph}.\n"
     result = result + f"Final Keplerian elements: {elements1}"
+    
+    # Add file report using the reportFile function
+    result += "\n\n" + reportFile(fnEph)
+
     # Return the final Keplerian elements
     return result
 
@@ -291,6 +297,7 @@ def orbit_prediction_numerical(
     )
     """
     from src.orbit_prediction_numerical import run_orbitPrediction_numerical
+    from src.reportFile import reportFile
     
     # Call the orbit prediction function
     result = run_orbitPrediction_numerical(
@@ -317,6 +324,9 @@ def orbit_prediction_numerical(
         K_PN=K_PN,
     )
 
+    # Add file report
+    result += "\n\n" + reportFile(filename)
+    
     return result
 
 # 3 satellite observation
@@ -465,6 +475,8 @@ def observation_station_satellite(
     
     # Call the satellite observation function with MJD values
     from src.observation_station_satellite import run_satellite_observation
+    from src.reportFile import reportFile
+    
     result = run_satellite_observation(
         ts=ts_mjd,
         step=step,
@@ -479,6 +491,12 @@ def observation_station_satellite(
         fn_eph=fn_eph,
         fn_data=fn_data
     )
+    
+    # Add file report - report output file if provided, otherwise report input file
+    if fn_data:
+        result += "\n\n" + reportFile(fn_data)
+    else:
+        result += "\n\n" + reportFile(fn_eph)
     
     return result
 

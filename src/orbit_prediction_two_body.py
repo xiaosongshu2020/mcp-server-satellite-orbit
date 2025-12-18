@@ -51,7 +51,7 @@ def orbit_prediction_two_body(t0, elements0, step, duration, fnEph="eph.txt"):
     # Open ephemeris file for writing
     with open(fnEph, 'w') as f:
         # Write header comment
-        f.write("# Ephemeris file: MJD_day MJD_sec x(km) y(km) z(km) vx(km/s) vy(km/s) vz(km/s)\n")
+        # f.write("# Ephemeris file: MJD_day MJD_sec x(km) y(km) z(km) vx(km/s) vy(km/s) vz(km/s)\n")
         
         # Initialize current elements
         current_elements = elements0.copy()
@@ -76,9 +76,10 @@ def orbit_prediction_two_body(t0, elements0, step, duration, fnEph="eph.txt"):
             mjd_day = int(current_mjd)
             mjd_sec = (current_mjd - mjd_day) * 86400.0
             
-            # Write to ephemeris file
-            f.write(f"{mjd_day} {mjd_sec:.6f} {cartesian[0]:.6f} {cartesian[1]:.6f} {cartesian[2]:.6f} "
-                   f"{cartesian[3]:.9f} {cartesian[4]:.9f} {cartesian[5]:.9f}\n")
+            # Write to ephemeris file with formatted columns matching the required style
+            # Format: MJD_full(1 decimal) MJD_sec(10 decimals) x(6) y(6) z(6) vx(7) vy(7) vz(7)
+            f.write(f"{current_mjd:10.1f} {mjd_sec:20.10f} {cartesian[0]:20.6f} {cartesian[1]:20.6f} {cartesian[2]:20.6f} "
+                   f"{cartesian[3]:20.7f} {cartesian[4]:20.7f} {cartesian[5]:20.7f}\n")
     
     # Return final orbital elements
     return current_elements
